@@ -1,0 +1,164 @@
+﻿@page
+@model IndexModel
+@{
+	ViewData["Title"] = "Home";
+	ViewBag.HeaderTransparent = "transparent-header";
+	ViewBag.LightLinks = "light-links";
+}
+
+<div class="text-center">
+	<section id="#main" class="mainBg">
+		<div class="contents">
+			<div>
+				<h1 class="HeroText"><span class="lefttPartHeroText">ENE</span><span class="rightPartHeroText">RGY</span></h1>
+				<img id="hero_image" class="HeroImage" src="~/images/img2.png" />
+			</div>
+			<div class="d-flex align-content-center justify-content-between">
+				<div class="d-flex flex-column HomeLeftSide">
+					<h1 class="d-flex start0 ps-2 fw-bold fs-2">OUR GREAT PRODUCT!</h1>
+					<p>Great product Great product Great productGreat product Great productGreat product Great productGreatGreat product Great product Great productGreat product Great productGreat product Great productGreat product Great productGreat productGreat productGreat product</p>
+				</div>
+				<div class="HomeRightSide">
+					<img src="~/images/apple1.png" />
+					<div>
+						<ul class="navbar-nav gap-4 SocialMediaIconsContainer">
+							<li class="navbar-item ">
+								<a class="nav-link text-light"><i class="bi bi-facebook SocialMediaIcons"></i></a>
+							</li>
+							<li class="navbar-item">
+								<a class="nav-link text-light"><i class="bi bi-instagram SocialMediaIcons"></i></a>
+							</li>
+							<li class="navbar-item">
+								<a class="nav-link text-light"><i class="bi bi-twitter-x SocialMediaIcons"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<section id="#about" class="aboutBg">
+		<div class="pt-2">
+			<h1 class="mt-5 pt-5">Great Things About US!</h1>
+			<div class="d-flex justify-content-between align-content-center mt-5">
+				<div class="AboutCircles">
+					<p>Great Taste</p>
+				</div>
+				<div class="AboutCircles">
+					<p>Great Taste</p>
+				</div>
+				<div class="AboutCircles">
+					<p>Great Taste</p>
+				</div>
+				<div class="AboutCircles">
+					<p>Great Taste</p>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<section id="#products" class="productsBg">
+		<div>
+			<h1 class="fw-bold text-uppercase">TOP PRODUCTS</h1>
+			<div class="justify-content-center align-content-center d-flex gap-3 flex-nowrap m-5 p-1">
+				<div class="customCard">
+					<img src="~/images/img2.png" />
+					<div class="customCardText">
+						<h2>SOMETHING Great</h2>
+						<p>Jucie with best things Jucie with best thingsJucie with best things Jucie with best thingsaaaaa</p>
+					</div>
+				</div>
+				<div class="customCard">
+					<img src="~/images/img2.png" />
+					<div class="customCardText">
+						<h2>SOMETHING</h2>
+						<p>Jucie with best things</p>
+					</div>
+				</div>
+				<div class="customCard">
+					<img src="~/images/img2.png" />
+					<div class="customCardText">
+						<h2>SOMETHING</h2>
+						<p>Jucie with best things</p>
+					</div>
+				</div>
+				<div class="customCard">
+					<img src="~/images/img2.png" />
+					<div class="customCardText">
+						<h2>SOMETHING</h2>
+						<p>Jucie with best things</p>
+					</div>
+				</div>
+			</div>
+			<button class="ProductsMoreButton">MORE</button>
+		</div>
+	</section>
+	<section id="#contactUs" class="contactUsBg">
+		<div>
+			<h1 class="text-capitalize fw-bold pt-2">Contact Us</h1>
+			<div class="d-flex justify-content-center align-items-center p-5">
+				<form class="mt-5 w-100 px-5 contactUsForm">
+					<div class="form-floating mb-3">
+						<input type="text" placeholder="" class="form-control" id="inputEmail">
+						<label for="inputEmail">Email</label>
+					</div>
+					<div class="form-floating">
+						<textarea class="form-control contactUsComments" placeholder="" id="floatingTextarea2" style="height: 100px" maxlength="450"></textarea>
+						<label for="floatingTextarea2">Comments</label>
+					</div>
+					<button type="submit" class="btn-primary w-25 py-1 my-3">Send</button>
+				</form>
+				<img class="contactUsImg w-25 mb-5" src="~/images/contact-usimg.png" />
+			</div>
+		</div>
+	</section>
+</div>
+
+<script>
+	function replaceImage() {
+		var img = document.getElementById('hero_image');
+		var currentSrc = img.src;
+
+		var imageName = currentSrc.substring(currentSrc.lastIndexOf('/') + 1, currentSrc.lastIndexOf('.'));
+		var currentIndex = parseInt(imageName.substring(3));
+
+		var nextIndex = (currentIndex % 3) + 1;
+
+		img.src = "images/img" + nextIndex + ".png";
+		
+		updateRootColors(nextIndex);
+	}
+
+	setInterval(replaceImage, 10000);
+
+
+	function updateRootColors(imageIndex) {
+    var root = document.documentElement;
+
+    var color1, color2;
+
+    switch (imageIndex) {
+        case 1:
+				color1 = "#447403";
+				color2 = "#e2f170";
+            break;
+        case 2:
+				color1 = "#740344";
+				color2 = "#F170E2";
+            break;
+        case 3:
+				color1 = "#034474";
+				color2 = "#70E2F1";
+            break;
+        default:
+				color1 = "447403";
+				color2 = "#e2f170";
+            break;
+    }
+
+    root.style.setProperty('--main-bg-color1', color1);
+    root.style.setProperty('--main-bg-color2', color2);
+}
+
+</script>
