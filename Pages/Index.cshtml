@@ -11,7 +11,7 @@
 		<div class="contents">
 			<div>
 				<h1 class="HeroText"><span class="lefttPartHeroText">ENE</span><span class="rightPartHeroText">RGY</span></h1>
-				<img id="hero_image" class="HeroImage" src="~/images/img2.png" />
+				<img id="hero_image" class="HeroImage" src="~/images/img1.png" />
 			</div>
 			<div class="d-flex align-content-center justify-content-between">
 				<div class="d-flex flex-column HomeLeftSide">
@@ -116,7 +116,23 @@
 </div>
 
 <script>
-	function replaceImage() {
+
+	var images = [
+		'img1.png',
+		'img2.png',
+		'img3.png'
+	];
+
+	function preloadImages() {
+		for (var i = 0; i < images.length; i++) {
+			var img = new Image();
+			img.src = images[i];
+		}
+
+		initSlider();
+	}
+
+	function setHeroImage(imgSrc) {
 		var img = document.getElementById('hero_image');
 		var currentSrc = img.src;
 
@@ -126,39 +142,41 @@
 		var nextIndex = (currentIndex % 3) + 1;
 
 		img.src = "images/img" + nextIndex + ".png";
-		
+
 		updateRootColors(nextIndex);
 	}
 
-	setInterval(replaceImage, 10000);
+	setInterval(setHeroImage, 10000);
 
 
 	function updateRootColors(imageIndex) {
-    var root = document.documentElement;
+		var root = document.documentElement;
 
-    var color1, color2;
+		var color1, color2;
 
-    switch (imageIndex) {
-        case 1:
+		switch (imageIndex) {
+			case 1:
 				color1 = "#447403";
 				color2 = "#e2f170";
-            break;
-        case 2:
+				break;
+			case 2:
 				color1 = "#740344";
 				color2 = "#F170E2";
-            break;
-        case 3:
+				break;
+			case 3:
 				color1 = "#034474";
 				color2 = "#70E2F1";
-            break;
-        default:
+				break;
+			default:
 				color1 = "447403";
 				color2 = "#e2f170";
-            break;
-    }
+				break;
+		}
 
-    root.style.setProperty('--main-bg-color1', color1);
-    root.style.setProperty('--main-bg-color2', color2);
-}
+		root.style.setProperty('--main-bg-color1', color1);
+		root.style.setProperty('--main-bg-color2', color2);
+	}
+
+
 
 </script>

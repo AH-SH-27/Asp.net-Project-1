@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JwyFWnx761dFVLahyCVJXMyCK1jjyHrwmr+B5UyJSk8=",
+  "Hash": "Rq9uHiqQ/7SQQ/QbqW9mhI104lfvuW5e6sp2hFJwHJg=",
   "Source": "TWebApplication1",
   "BasePath": "_content/TWebApplication1",
   "Mode": "Default",
@@ -205,25 +205,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\img4.png"
-    },
-    {
-      "Identity": "C:\\Users\\user\\source\\repos\\TWebApplication1\\TWebApplication1\\wwwroot\\Images\\img5.png",
-      "SourceId": "TWebApplication1",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\source\\repos\\TWebApplication1\\TWebApplication1\\wwwroot\\",
-      "BasePath": "_content/TWebApplication1",
-      "RelativePath": "Images/img5.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\img5.png"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\TWebApplication1\\TWebApplication1\\wwwroot\\js\\site.js",

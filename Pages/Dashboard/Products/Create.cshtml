@@ -1,0 +1,58 @@
+﻿@page
+@model TWebApplication1.Pages.Dashboard.Products.CreateModel
+@{
+}
+<div class="row mt-5 pt-5">
+	<div class="col-md-8 mx-auto rounded border p-3">
+		<h2 class="text-center mb-5">New Product</h2>
+		<form method="post" enctype="multipart/form-data">
+			<label asp-for="ProductDto.Name" class="col-sm-4 col-form-label"></label>
+			<div>
+				<input class="form-control" asp-for="ProductDto.Name" />
+                <span asp-validation-for="ProductDto.Name" class="text-danger"></span>
+			</div>
+            <div class="form-group">
+                <label asp-for="ProductDto.Brand" class="col-sm-4 col-form-label"></label>
+                <div>
+                    <input class="form-control" asp-for="ProductDto.Brand" />
+                    <span asp-validation-for="ProductDto.Brand" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ProductDto.Category" class="col-sm-4 col-form-label"></label>
+                <div>
+                    <input class="form-control" asp-for="ProductDto.Category" />
+                    <span asp-validation-for="ProductDto.Category" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ProductDto.Description" class="col-sm-4 col-form-label"></label>
+                <div>
+                    <textarea class="form-control" asp-for="ProductDto.Description"></textarea>
+                    <span asp-validation-for="ProductDto.Description" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ProductDto.Price" class="col-sm-4 col-form-label"></label>
+                <div>
+                    <input type="number" class="form-control" asp-for="ProductDto.Price" />
+                    <span asp-validation-for="ProductDto.Price" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ProductDto.ImageFileName" class="col-sm-4 col-form-label"></label>
+                <div>
+                    <input type="file" class="form-control-file" asp-for="ProductDto.ImageFileName" accept="image/*" />
+                    <span asp-validation-for="ProductDto.ImageFileName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group mt-2">
+                <button type="submit" class="btn btn-primary">Create Product</button>
+            </div>
+		</form>
+	</div>
+</div>

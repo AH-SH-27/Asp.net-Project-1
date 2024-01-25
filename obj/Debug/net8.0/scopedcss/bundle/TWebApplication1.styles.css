@@ -1,3 +1,17 @@
+/* _content/TWebApplication1/Pages/Shared/_DashboardLayout.cshtml.rz.scp.css */
+body[b-ynjtuqvfi0] {
+}
+
+.bd-sidebar[b-ynjtuqvfi0] {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5rem;
+    display: block !important;
+    height: calc(100vh - 6rem);
+    padding-left: 0.25rem;
+    margin-left: -0.25rem;
+    overflow-y: auto;
+}
 /* _content/TWebApplication1/Pages/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
@@ -14,9 +28,6 @@ a.navbar-brand[b-7ay8yp4qx6] {
 
 a[b-7ay8yp4qx6] {
   color: #0077cc;
-}
-html[b-7ay8yp4qx6] {
-    background-color: black;
 }
 
 .transparent-header[b-7ay8yp4qx6]{
@@ -35,8 +46,65 @@ html[b-7ay8yp4qx6] {
   border-color: #1861ac;
 }
 
+/* Ligh-Dark Mode Button */
+.containerToggleTest[b-7ay8yp4qx6] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+}
+
+.toggleTest[b-7ay8yp4qx6] {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+    border-radius: 50%;
+    
+}
+    .toggleTest:checked + .spanTest[b-7ay8yp4qx6] {
+        background: black;
+    }
+    .toggleTest:checked ~ .sunToggle[b-7ay8yp4qx6] {
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+    .toggleTest:checked ~ .moonToggle[b-7ay8yp4qx6] {
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+
+    .spanTest[b-7ay8yp4qx6] {
+        position: absolute;
+        z-index: 3;
+        width: 35px;
+        height: 35px;
+        background: #00d2c5;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+.sunToggle[b-7ay8yp4qx6] {
+    position: absolute;
+    z-index: 4;
+    color: yellow;
+    transition: 1s ease;
+}
+.moonToggle[b-7ay8yp4qx6] {
+    position: absolute;
+    z-index: 4;
+    color: orange;
+    opacity: 0;
+    transition: 1s ease;
+}
+
+
+
 .border-top[b-7ay8yp4qx6] {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
 .border-bottom[b-7ay8yp4qx6] {
   border-bottom: 1px solid #e5e5e5;

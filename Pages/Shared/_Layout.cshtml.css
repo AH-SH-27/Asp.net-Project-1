@@ -14,9 +14,6 @@ a.navbar-brand {
 a {
   color: #0077cc;
 }
-html {
-    background-color: black;
-}
 
 .transparent-header{
     background-color: transparent !important;
@@ -34,8 +31,65 @@ html {
   border-color: #1861ac;
 }
 
+/* Ligh-Dark Mode Button */
+.containerToggleTest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+}
+
+.toggleTest {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+    border-radius: 50%;
+    
+}
+    .toggleTest:checked + .spanTest {
+        background: black;
+    }
+    .toggleTest:checked ~ .sunToggle {
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+    .toggleTest:checked ~ .moonToggle {
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+
+    .spanTest {
+        position: absolute;
+        z-index: 3;
+        width: 35px;
+        height: 35px;
+        background: #00d2c5;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+.sunToggle {
+    position: absolute;
+    z-index: 4;
+    color: yellow;
+    transition: 1s ease;
+}
+.moonToggle {
+    position: absolute;
+    z-index: 4;
+    color: orange;
+    opacity: 0;
+    transition: 1s ease;
+}
+
+
+
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
 .border-bottom {
   border-bottom: 1px solid #e5e5e5;

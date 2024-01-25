@@ -8,19 +8,25 @@
 :root {
     --main-bg-color1: #447403;
     --main-bg-color2: #e2f170;
+    --light-background-color: #dc2743;
+    --light-text-color: #ffffff;
+    --light-link-color: #00aaff;
+    --dark-background-color: #000;
+    --dark-text-color: #333333;
+    --dark-link-color: #0077cc;
+    --colors1-background: #518c01;
+    --colors2-background: #e6683c;
+}
 
+html[data-theme="light"] {
+    --main-bg-color: var(--colors1-background);
+    --main-text-color: var(--colors1-text);
+}
 
-    --theme1: {
-    --background-color: #1a1a1a;
-    --text-color: #ffffff;
-    --link-color: #00aaff;
-  };
-    --theme2: {
-    --background-color: #f4f4f4;
-    --text-color: #333333;
-    --link-color: #0077cc;
-  };
-
+/* Dark Theme */
+html[data-theme="dark"] {
+    --main-bg-color: var(--colors2-background);
+    --main-text-color: var(--colors2-text);
 }
 
 @media (min-width: 768px) {
@@ -38,16 +44,8 @@
 }
 
 body {
-    background: black;
     margin-top: -81.8px !important;
 }
-
-    body[data-theme="theme2"] {
-        --background-color: var(--theme2--background-color);
-        --text-color: var(--theme2--text-color);
-        --link-color: var(--theme2--link-color);
-    }
-
 
 section {
     height: 100vh;
@@ -56,7 +54,7 @@ section {
 /* Home Page */
 /*  Main Section  */
 .mainBg {
-    background: linear-gradient(to right, var(--main-color2) 30%, var(--main-color1) 50%);
+    background: linear-gradient(to right, var(--main-bg-color2) 30%, var(--main-bg-color1) 50%);
 }
 
 .contents {
@@ -73,11 +71,11 @@ section {
     color: #001F00;
 }
 
+
 .HeroImage {
     position: absolute;
-    top: 15px;
-    right: 37%;
-    height: 750px;
+    top: 28%;
+    right: 47%;
 }
 
 .rightPartHeroText {

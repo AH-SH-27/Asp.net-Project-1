@@ -18,6 +18,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\user\source\repos\TWebApplication1\TWebApplication1
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/user/source/repos/TWebApplication1/TWebApplication1/Pages/Dashboard/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXERhc2hib2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/source/repos/TWebApplication1/TWebApplication1/Pages/Dashboard/Products/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXFByb2R1Y3RzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/source/repos/TWebApplication1/TWebApplication1/Pages/Dashboard/Products/Products.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXFByb2R1Y3RzXFByb2R1Y3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/source/repos/TWebApplication1/TWebApplication1/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -45,6 +57,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/user/source/repos/TWebApplication1/TWebApplication1/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/source/repos/TWebApplication1/TWebApplication1/Pages/Shared/_DashboardLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9EYXNoYm9hcmRMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ynjtuqvfi0
 
 [C:/Users/user/source/repos/TWebApplication1/TWebApplication1/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s

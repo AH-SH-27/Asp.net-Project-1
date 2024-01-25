@@ -1,0 +1,42 @@
+﻿@page
+@model ProductsModel
+@{
+}
+<div>
+	<h1>Products</h1>
+	<div class="col">
+		<a class="btn btn-primary" asp-page="/Dashboard/Products/Create">New Product</a>
+	</div>
+	<div class="col">
+
+	</div>
+
+	<table class="table">
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Brand</th>
+			<th>Category</th>
+			<th>Price</th>
+			<th>Image</th>
+			<th>Created At</th>
+			<th>Action</th>
+		</tr>
+		@foreach(var product in Model.Products)
+		{
+			<tr>
+				<td>@product.Id</td>
+				<td>@product.Name</td>
+				<td>@product.Brand</td>
+				<td>@product.Category</td>
+				<td>@product.Price</td>
+				<td>@product.ImageFileName</td>
+				<td>@product.CreatedAt</td>
+				<td style="white-space:nowrap">
+					<a class="btn btn-primary btn-sm" asp-page="/Dashboard/Products/Edit">Edit</a>
+					<a class="btn btn-danger btn-sm" asp-page="/Dashboard/Products/Delete">Delete</a>
+				</td>
+			</tr>
+		}
+	</table>
+</div>
