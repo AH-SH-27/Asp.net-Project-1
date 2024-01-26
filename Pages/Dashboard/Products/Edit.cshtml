@@ -1,29 +1,38 @@
 ﻿@page
-@model TWebApplication1.Pages.Dashboard.Products.CreateModel
+@model TWebApplication1.Pages.Dashboard.Products.EditModel
 @{
 }
 <div class="row mt-5 pt-5">
-	<div class="col-md-8 mx-auto rounded border p-3">
-		<h2 class="text-center mb-5">New Product</h2>
-        @if(Model.errorMessage.Length > 0)
+    <div class="col-md-8 mx-auto rounded border p-3">
+        <h2 class="text-center mb-5">Edit Product</h2>
+        @if (Model.errorMessage.Length > 0)
         {
             <div class="alert alert-warning alert-dismissible fade show" role="alert">
                 <strong>@Model.errorMessage</strong>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-        }else if(Model.successMessage.Length > 0)
+        }
+        else if (Model.successMessage.Length > 0)
         {
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>@Model.successMessage</strong>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>@Model.successMessage</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
         }
         <form method="post" enctype="multipart/form-data">
-			<label asp-for="ProductDto.Name" class="col-sm-4 col-form-label"></label>
-			<div>
-				<input class="form-control" asp-for="ProductDto.Name" />
+            <div class="form-group">
+                <label asp-for="Product.Id" class="col-sm-4 col-form-label">Id</label>
+                <div>
+                    <input readonly class="form-control-plaintext" value="@Model.Product.Id" />
+                </div>
+            </div>
+            <div class="form-group">
+            <label asp-for="ProductDto.Name" class="col-sm-4 col-form-label"></label>
+            <div>
+                <input class="form-control" asp-for="ProductDto.Name" />
                 <span asp-validation-for="ProductDto.Name" class="text-danger"></span>
-			</div>
+            </div>
+            </div>
             <div class="form-group">
                 <label asp-for="ProductDto.Brand" class="col-sm-4 col-form-label"></label>
                 <div>
@@ -62,16 +71,31 @@
             </div>
 
             <div class="form-group">
+                <label class="col-sm-4 col-form-label">Image</label>
+                <div>
+                    <img src="/products/@Model.Product.ImageFileName" />
+                </div>
+            </div>
+
+            <div class="form-group">
                 <label asp-for="ProductDto.ImageFile" class="col-sm-4 col-form-label"></label>
                 <div>
                     <input type="file" class="form-control-file" asp-for="ProductDto.ImageFile" accept="image/*" />
                     <span asp-validation-for="ProductDto.ImageFile" class="text-danger"></span>
                 </div>
             </div>
-            <div class="form-group mt-2">
-                <button type="submit" class="btn btn-primary">Create Product</button>
+
+              <div class="form-group">
+                <label class="col-sm-4 col-form-label">Created At</label>
+                <div>
+                    <input readonly class="form-control-plaintext" value="@Model.Product.CreatedAt.ToString("dd/MM/yyyy")" />
+                </div>
             </div>
-		</form>
+
+            <div class="form-group mt-2">
+                <button type="submit" class="btn btn-primary">Edit Product</button>
+            </div>
+        </form>
         <a class="btn btn-outline-primary" asp-page="/Dashboard/Products/Products">Cancel</a>
-	</div>
+    </div>
 </div>

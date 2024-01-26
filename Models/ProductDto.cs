@@ -22,8 +22,7 @@ namespace TWebApplication1.Models
 
 		[DisplayName("Image")]
         [DataType(DataType.Upload)]
-        [FileExtensions(Extensions = "jpg,jpeg,png,gif", ErrorMessage = "Please upload a valid image file.")]
-        public IFormFile? ImageFileName { get; set; }
+        public IFormFile? ImageFile{ get; set; }
 
 	}
 }
